@@ -1,0 +1,1465 @@
+[
+    {
+        "id": "312e6382642e5690",
+        "type": "tab",
+        "label": "플로우 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "42a51db2578327be",
+        "type": "mqtt-broker",
+        "name": "범주_out",
+        "broker": "ai.doowon.ac.kr",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "367291eaf1cfb9e4",
+        "type": "ui_tab",
+        "name": "온도/습도",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "65c014bc7eb0d01c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "89847556c582577e",
+        "type": "ui_group",
+        "name": "온도/습도",
+        "tab": "367291eaf1cfb9e4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ea4ea6931dbd6dee",
+        "type": "ui_tab",
+        "name": "스위치",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f30a93dcee1c231b",
+        "type": "ui_group",
+        "name": "스위치",
+        "tab": "ea4ea6931dbd6dee",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e84054b2e6b5a667",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ai.doowon.ac.kr",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "aff9f68830049fbc",
+        "type": "mqtt-broker",
+        "name": "test.mosquitto.org",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "95a465dad1aac0c8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "72c988ce08367339",
+        "type": "ui_group",
+        "name": "온도",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f15d66b3.c7edf8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ai.doowon.ac.kr",
+        "port": "1883",
+        "tls": "509a45a9.089bbc",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "83d4ee3be22747f2",
+        "type": "ui_group",
+        "name": "스위치",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "509a45a9.089bbc",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "94191b3ef7-certificate.pem.crt",
+        "keyname": "94191b3ef7-private.pem.key",
+        "caname": "MtestCA.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "ec069c5cfdb99cc5",
+        "type": "ui_group",
+        "name": "습도",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5571f7ce1b380216",
+        "type": "ui_group",
+        "name": "LED 상태",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1eb21aa03d27126c",
+        "type": "ui_group",
+        "name": "DB 관리",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5463ef849b968425",
+        "type": "ui_group",
+        "name": "데이터 표시",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ba4b29ba02f753ad",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a9b015ae48fb271f",
+        "type": "Stackhero-MySQL-Server",
+        "name": "iot.status",
+        "host": "166.104.81.31",
+        "port": "3306",
+        "tls": false,
+        "database": ""
+    },
+    {
+        "id": "feed17c7fe9fda2b",
+        "type": "ui_spacer",
+        "z": "312e6382642e5690",
+        "name": "spacer",
+        "group": "5571f7ce1b380216",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "52169940a92b5e41",
+        "type": "mqtt in",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/out",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "42a51db2578327be",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "7d7bdf3e65e8dbe6",
+                "75fe9d6868b5bc1f"
+            ]
+        ]
+    },
+    {
+        "id": "3d4aba3e1941eefd",
+        "type": "debug",
+        "z": "312e6382642e5690",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7d7bdf3e65e8dbe6",
+        "type": "change",
+        "z": "312e6382642e5690",
+        "name": "온도",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "3d4aba3e1941eefd",
+                "05c3c526a3803a05",
+                "6f611695815fe102"
+            ]
+        ]
+    },
+    {
+        "id": "75fe9d6868b5bc1f",
+        "type": "change",
+        "z": "312e6382642e5690",
+        "name": "습도",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "c58d180fc998ce7d",
+                "3c23fb7405bc29e2",
+                "25b08eb0af1dd16c"
+            ]
+        ]
+    },
+    {
+        "id": "c58d180fc998ce7d",
+        "type": "debug",
+        "z": "312e6382642e5690",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "05c3c526a3803a05",
+        "type": "ui_gauge",
+        "z": "312e6382642e5690",
+        "name": "온도 그래프",
+        "group": "89847556c582577e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "온도",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6f611695815fe102",
+        "type": "ui_chart",
+        "z": "312e6382642e5690",
+        "name": "온도 차트",
+        "group": "89847556c582577e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "온도",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c23fb7405bc29e2",
+        "type": "ui_gauge",
+        "z": "312e6382642e5690",
+        "name": "습도 그래프",
+        "group": "89847556c582577e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "습도",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "25b08eb0af1dd16c",
+        "type": "ui_chart",
+        "z": "312e6382642e5690",
+        "name": "습도 차트",
+        "group": "89847556c582577e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "습도",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "423b838b2be781a4",
+        "type": "ui_switch",
+        "z": "312e6382642e5690",
+        "name": "출력 1번",
+        "label": "출력 1번",
+        "tooltip": "",
+        "group": "f30a93dcee1c231b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":1,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":1,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "f09a84ed25905c50"
+            ]
+        ]
+    },
+    {
+        "id": "f09a84ed25905c50",
+        "type": "mqtt out",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/in",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e84054b2e6b5a667",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d83888832f79be49",
+        "type": "ui_switch",
+        "z": "312e6382642e5690",
+        "name": "출력 2번",
+        "label": "출력 2번",
+        "tooltip": "",
+        "group": "f30a93dcee1c231b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":2,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":2,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "f09a84ed25905c50"
+            ]
+        ]
+    },
+    {
+        "id": "9b1e72d119a2628b",
+        "type": "ui_switch",
+        "z": "312e6382642e5690",
+        "name": "출력 3번",
+        "label": "출력 3번",
+        "tooltip": "",
+        "group": "f30a93dcee1c231b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":3,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":3,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "f09a84ed25905c50"
+            ]
+        ]
+    },
+    {
+        "id": "562423697927f410",
+        "type": "ui_switch",
+        "z": "312e6382642e5690",
+        "name": "출력 0번",
+        "label": "출력 0번",
+        "tooltip": "",
+        "group": "f30a93dcee1c231b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "f09a84ed25905c50"
+            ]
+        ]
+    },
+    {
+        "id": "f9cbc9aeadc41386",
+        "type": "mqtt in",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/out",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "42a51db2578327be",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "851f0cec20eee25c"
+            ]
+        ]
+    },
+    {
+        "id": "851f0cec20eee25c",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "습도 체크",
+        "func": "if (msg.payload.humi >= 60){\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\", \n        \"order\": 2, \n        \"no\": 1, \n        \"value\": true\n    }\n    return msg;\n}\nelse {\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\",\n        \"order\": 2,\n        \"no\": 1,\n        \"value\": false\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "6450d1698e1d0b24"
+            ]
+        ]
+    },
+    {
+        "id": "6450d1698e1d0b24",
+        "type": "debug",
+        "z": "312e6382642e5690",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "aee701d431e7579b",
+        "type": "mqtt out",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/in",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e84054b2e6b5a667",
+        "x": 750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "efac311f9df780c4",
+        "type": "mqtt in",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/out",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "42a51db2578327be",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 940,
+        "wires": [
+            [
+                "666e671985615eb2"
+            ]
+        ]
+    },
+    {
+        "id": "666e671985615eb2",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "온도 체크",
+        "func": "if (msg.payload.temp >= 25){\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\", \n        \"order\": 2, \n        \"no\": 1, \n        \"value\": true\n    }\n    return msg;\n}\nelse {\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\",\n        \"order\": 2,\n        \"no\": 1,\n        \"value\": false\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 940,
+        "wires": [
+            [
+                "847fe5aaa41eeeec"
+            ]
+        ]
+    },
+    {
+        "id": "847fe5aaa41eeeec",
+        "type": "debug",
+        "z": "312e6382642e5690",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "e1672b326df9e03c",
+        "type": "mqtt out",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/in",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e84054b2e6b5a667",
+        "x": 750,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f747a526c0c325c4",
+        "type": "mqtt in",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/out",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "42a51db2578327be",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 1140,
+        "wires": [
+            [
+                "d8dbeff1070e7ba4"
+            ]
+        ]
+    },
+    {
+        "id": "d8dbeff1070e7ba4",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "습도 체크",
+        "func": "if (msg.payload.humi >= 60){\n    msg.payload = {\n        \"mac\": \"D4:8A:FC:B5:34:64\", \n        \"order\": 2, \n        \"no\": 1, \n        \"value\": true\n    }\n    return msg;\n}\nelse {\n    msg.payload = {\n        \"mac\": \"D4:8A:FC:B5:34:64\",\n        \"order\": 2,\n        \"no\": 1,\n        \"value\": false\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1140,
+        "wires": [
+            [
+                "912ab5cf4413bcb7"
+            ]
+        ]
+    },
+    {
+        "id": "912ab5cf4413bcb7",
+        "type": "debug",
+        "z": "312e6382642e5690",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "4b43034b4b56e561",
+        "type": "mqtt out",
+        "z": "312e6382642e5690",
+        "name": "i2r/a@gmail.com/in",
+        "topic": "i2r/a@gmail.com/in",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "aff9f68830049fbc",
+        "x": 710,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "26a18b3eb8081ae4",
+        "type": "inject",
+        "z": "312e6382642e5690",
+        "name": "시간지정",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "35 05 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 1400,
+        "wires": [
+            [
+                "d6181354acb36a80",
+                "521f8c2e10e72b95"
+            ]
+        ]
+    },
+    {
+        "id": "d6181354acb36a80",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "정해진시간",
+        "func": "if (msg.payload){\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\",\n        \"order\": 2,\n        \"no\": 1,\n        \"value\": true\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1400,
+        "wires": [
+            [
+                "4f5d084159ba3e22"
+            ]
+        ]
+    },
+    {
+        "id": "4f5d084159ba3e22",
+        "type": "mqtt out",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/in",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e84054b2e6b5a667",
+        "x": 850,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "521f8c2e10e72b95",
+        "type": "delay",
+        "z": "312e6382642e5690",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "60",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 1460,
+        "wires": [
+            [
+                "0317c39d5932fdf7"
+            ]
+        ]
+    },
+    {
+        "id": "0317c39d5932fdf7",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "딜레이시간",
+        "func": "if (msg.payload){\n    msg.payload = {\n        \"mac\": \"08:B6:1F:75:11:FE\",\n        \"order\": 2,\n        \"no\": 1,\n        \"value\": false\n    }\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1460,
+        "wires": [
+            [
+                "4f5d084159ba3e22"
+            ]
+        ]
+    },
+    {
+        "id": "881a3f8a1e4dc511",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "Extract 'out[0]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[0];\n\nmsg.payload = inValue === 1;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1600,
+        "wires": [
+            [
+                "306390ed9a5aa32f"
+            ]
+        ]
+    },
+    {
+        "id": "176349c977bf4983",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "Extract 'out[1]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[1];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1640,
+        "wires": [
+            [
+                "718485caede6776c"
+            ]
+        ]
+    },
+    {
+        "id": "fe6fbd3172fd96ef",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "Extract 'out[2]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[2];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1680,
+        "wires": [
+            [
+                "bd4dc30c7fd71309"
+            ]
+        ]
+    },
+    {
+        "id": "655e98efe23769be",
+        "type": "function",
+        "z": "312e6382642e5690",
+        "name": "Extract 'out[3]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[3];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1720,
+        "wires": [
+            [
+                "d553132a70bee8a8"
+            ]
+        ]
+    },
+    {
+        "id": "306390ed9a5aa32f",
+        "type": "ui_led",
+        "z": "312e6382642e5690",
+        "order": 1,
+        "group": "f30a93dcee1c231b",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 0",
+        "x": 870,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "718485caede6776c",
+        "type": "ui_led",
+        "z": "312e6382642e5690",
+        "order": 2,
+        "group": "f30a93dcee1c231b",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 1",
+        "x": 870,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "bd4dc30c7fd71309",
+        "type": "ui_led",
+        "z": "312e6382642e5690",
+        "order": 3,
+        "group": "f30a93dcee1c231b",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 2",
+        "x": 870,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "d553132a70bee8a8",
+        "type": "ui_led",
+        "z": "312e6382642e5690",
+        "order": 4,
+        "group": "f30a93dcee1c231b",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 3",
+        "x": 870,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "31cdc2b887944880",
+        "type": "mqtt in",
+        "z": "312e6382642e5690",
+        "name": "i2r/bombzoo78@gmail.com/out",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e84054b2e6b5a667",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 1600,
+        "wires": [
+            [
+                "881a3f8a1e4dc511",
+                "176349c977bf4983",
+                "fe6fbd3172fd96ef",
+                "655e98efe23769be"
+            ]
+        ]
+    }
+]

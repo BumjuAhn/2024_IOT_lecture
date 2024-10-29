@@ -1,0 +1,2122 @@
+[
+    {
+        "id": "e5b146d617282e47",
+        "type": "tab",
+        "label": "온도_습도 정보",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f142116693ccffad",
+        "type": "tab",
+        "label": "릴레이 ON OFF",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "720be66f6a2c2df3",
+        "type": "tab",
+        "label": "스케줄러",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a33f3366c45d0823",
+        "type": "tab",
+        "label": "DB 관리",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "95a465dad1aac0c8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9aa0f9fc05d48119",
+        "type": "ui_tab",
+        "name": "온도/습도",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "72c988ce08367339",
+        "type": "ui_group",
+        "name": "온도",
+        "tab": "9aa0f9fc05d48119",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f15d66b3.c7edf8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "ai.doowon.ac.kr",
+        "port": "1883",
+        "tls": "509a45a9.089bbc",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "83d4ee3be22747f2",
+        "type": "ui_group",
+        "name": "스위치",
+        "tab": "2ab50a64652d44a8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "509a45a9.089bbc",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "94191b3ef7-certificate.pem.crt",
+        "keyname": "94191b3ef7-private.pem.key",
+        "caname": "MtestCA.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "2ab50a64652d44a8",
+        "type": "ui_tab",
+        "name": "릴레이 ON OFF",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ec069c5cfdb99cc5",
+        "type": "ui_group",
+        "name": "습도",
+        "tab": "9aa0f9fc05d48119",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5571f7ce1b380216",
+        "type": "ui_group",
+        "name": "LED 상태",
+        "tab": "2ab50a64652d44a8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09ecec17844fb200",
+        "type": "ui_tab",
+        "name": "DB 관리",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1eb21aa03d27126c",
+        "type": "ui_group",
+        "name": "DB 관리",
+        "tab": "09ecec17844fb200",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5463ef849b968425",
+        "type": "ui_group",
+        "name": "데이터 표시",
+        "tab": "09ecec17844fb200",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ba4b29ba02f753ad",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a9b015ae48fb271f",
+        "type": "Stackhero-MySQL-Server",
+        "name": "iot.status",
+        "host": "166.104.81.31",
+        "port": "3306",
+        "tls": false,
+        "database": "iot"
+    },
+    {
+        "id": "d1cd8627e7786e94",
+        "type": "mqtt in",
+        "z": "e5b146d617282e47",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ba4b29ba02f753ad",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "e73d7e8406b92de9",
+                "4573ae338e0cc8fe",
+                "ba2d9d08905e1e17"
+            ]
+        ]
+    },
+    {
+        "id": "e73d7e8406b92de9",
+        "type": "debug",
+        "z": "e5b146d617282e47",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1cb5bb0463c37a19",
+        "type": "mqtt out",
+        "z": "e5b146d617282e47",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ba4b29ba02f753ad",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2f287ffbada545aa",
+        "type": "inject",
+        "z": "e5b146d617282e47",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "dbf9bdf07e8f7d0b"
+            ]
+        ]
+    },
+    {
+        "id": "2e87776970d1d530",
+        "type": "inject",
+        "z": "e5b146d617282e47",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "dbf9bdf07e8f7d0b"
+            ]
+        ]
+    },
+    {
+        "id": "dbf9bdf07e8f7d0b",
+        "type": "function",
+        "z": "e5b146d617282e47",
+        "name": "Create Message",
+        "func": "if (msg.payload) {\n    msg.payload = createMessage(true);\n} else {\n    msg.payload = createMessage(false); // Default to true if there is an error\n}\nreturn msg;\n\nfunction createMessage(value) {\n    return {\n        mac: \"08:B6:1F:75:11:FE\",\n        order: 2,\n        no: 2,\n        value: value\n    };\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "1cb5bb0463c37a19"
+            ]
+        ]
+    },
+    {
+        "id": "10e4226c4ee3507f",
+        "type": "function",
+        "z": "e5b146d617282e47",
+        "name": "Create Message",
+        "func": "msg.payload = createMessage();\nreturn msg;\n\nfunction createMessage() {\n    return {\n        mac: \"08:B6:1F:75:11:FE\",\n        order: 3,\n    };\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 640,
+        "wires": [
+            [
+                "39dcc4fc30f9677a",
+                "b607ab029cf6b4e8"
+            ]
+        ]
+    },
+    {
+        "id": "39dcc4fc30f9677a",
+        "type": "mqtt out",
+        "z": "e5b146d617282e47",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ba4b29ba02f753ad",
+        "x": 690,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "581889c6768a4181",
+        "type": "inject",
+        "z": "e5b146d617282e47",
+        "name": "Valve_Status",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "valve_status",
+        "payloadType": "str",
+        "x": 250,
+        "y": 640,
+        "wires": [
+            [
+                "10e4226c4ee3507f"
+            ]
+        ]
+    },
+    {
+        "id": "4573ae338e0cc8fe",
+        "type": "change",
+        "z": "e5b146d617282e47",
+        "name": "temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "57b301900a8ade04",
+                "694a6bbcec9e7fb1"
+            ]
+        ]
+    },
+    {
+        "id": "57b301900a8ade04",
+        "type": "ui_chart",
+        "z": "e5b146d617282e47",
+        "name": "",
+        "group": "72c988ce08367339",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "40",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 710,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba2d9d08905e1e17",
+        "type": "change",
+        "z": "e5b146d617282e47",
+        "name": "humi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "2173b7370855ea7a",
+                "446a9586d7fa3deb"
+            ]
+        ]
+    },
+    {
+        "id": "2173b7370855ea7a",
+        "type": "ui_chart",
+        "z": "e5b146d617282e47",
+        "name": "",
+        "group": "ec069c5cfdb99cc5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "100",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 700,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "694a6bbcec9e7fb1",
+        "type": "ui_gauge",
+        "z": "e5b146d617282e47",
+        "name": "온도",
+        "group": "72c988ce08367339",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "",
+        "label": "도",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "446a9586d7fa3deb",
+        "type": "ui_gauge",
+        "z": "e5b146d617282e47",
+        "name": "습도",
+        "group": "ec069c5cfdb99cc5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "980ab7f4e939ef2b",
+        "type": "comment",
+        "z": "e5b146d617282e47",
+        "name": "온도 / 습도 정보 표시",
+        "info": "",
+        "x": 260,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9f527366819949e6",
+        "type": "comment",
+        "z": "e5b146d617282e47",
+        "name": "릴레이 수동 ON OFF",
+        "info": "",
+        "x": 260,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "266547c060534f83",
+        "type": "comment",
+        "z": "e5b146d617282e47",
+        "name": "현재 보드 정보 불러오기",
+        "info": "",
+        "x": 270,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b607ab029cf6b4e8",
+        "type": "debug",
+        "z": "e5b146d617282e47",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b02a0375436832f0",
+        "type": "mqtt out",
+        "z": "f142116693ccffad",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ba4b29ba02f753ad",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f7d91e94e9acb74b",
+        "type": "mqtt in",
+        "z": "f142116693ccffad",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "ba4b29ba02f753ad",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "5d43e0fb87f57788"
+            ]
+        ]
+    },
+    {
+        "id": "c807acac89bfd994",
+        "type": "ui_switch",
+        "z": "f142116693ccffad",
+        "name": "",
+        "label": "스위치 0",
+        "tooltip": "",
+        "group": "83d4ee3be22747f2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160.9999942779541,
+        "y": 166.0000057220459,
+        "wires": [
+            [
+                "b02a0375436832f0"
+            ]
+        ]
+    },
+    {
+        "id": "66640c3cf569b9c8",
+        "type": "function",
+        "z": "f142116693ccffad",
+        "name": "Extract 'out[0]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[0];\n\n// msg.payload = inValue === 1;\n\nif (inValue === 1) {\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 520,
+        "wires": [
+            [
+                "8a8a37538aa84409"
+            ]
+        ]
+    },
+    {
+        "id": "5d43e0fb87f57788",
+        "type": "json",
+        "z": "f142116693ccffad",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "66640c3cf569b9c8",
+                "46e9f9efa982de7b",
+                "d4a0b7a3ea7356e9",
+                "dc23c878cd7e5cd7"
+            ]
+        ]
+    },
+    {
+        "id": "9613d08d14f9c28d",
+        "type": "comment",
+        "z": "f142116693ccffad",
+        "name": "스위치 ON OFF",
+        "info": "",
+        "x": 180,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8a8a37538aa84409",
+        "type": "ui_led",
+        "z": "f142116693ccffad",
+        "order": 2,
+        "group": "5571f7ce1b380216",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 0",
+        "x": 810,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "90fed3e75ea441a9",
+        "type": "ui_switch",
+        "z": "f142116693ccffad",
+        "name": "",
+        "label": "스위치 1",
+        "tooltip": "",
+        "group": "83d4ee3be22747f2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":1,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":1,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "b02a0375436832f0"
+            ]
+        ]
+    },
+    {
+        "id": "e23492682f101bce",
+        "type": "ui_switch",
+        "z": "f142116693ccffad",
+        "name": "",
+        "label": "스위치 2",
+        "tooltip": "",
+        "group": "83d4ee3be22747f2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":2,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":2,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "b02a0375436832f0"
+            ]
+        ]
+    },
+    {
+        "id": "b7d4cffe57004678",
+        "type": "ui_switch",
+        "z": "f142116693ccffad",
+        "name": "",
+        "label": "스위치 3",
+        "tooltip": "",
+        "group": "83d4ee3be22747f2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":3,\"value\":true}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":3,\"value\":false}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "b02a0375436832f0"
+            ]
+        ]
+    },
+    {
+        "id": "7b60a6b5f62400bf",
+        "type": "comment",
+        "z": "f142116693ccffad",
+        "name": "스위치 ON/OFF LED 표시",
+        "info": "",
+        "x": 210,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "46e9f9efa982de7b",
+        "type": "function",
+        "z": "f142116693ccffad",
+        "name": "Extract 'out[1]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[1];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 560,
+        "wires": [
+            [
+                "88968d2eb75afe68"
+            ]
+        ]
+    },
+    {
+        "id": "88968d2eb75afe68",
+        "type": "ui_led",
+        "z": "f142116693ccffad",
+        "order": 3,
+        "group": "5571f7ce1b380216",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 1",
+        "x": 810,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d4a0b7a3ea7356e9",
+        "type": "function",
+        "z": "f142116693ccffad",
+        "name": "Extract 'out[2]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[2];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "4b2470a3798861b8"
+            ]
+        ]
+    },
+    {
+        "id": "4b2470a3798861b8",
+        "type": "ui_led",
+        "z": "f142116693ccffad",
+        "order": 4,
+        "group": "5571f7ce1b380216",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 2",
+        "x": 810,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "dc23c878cd7e5cd7",
+        "type": "function",
+        "z": "f142116693ccffad",
+        "name": "Extract 'out[3]'",
+        "func": "var payload = msg.payload;\nvar inValue = payload.out[3];\n\nmsg.payload = inValue === 1;\n// msg.payload = inValue;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 640,
+        "wires": [
+            [
+                "786c79a477b07b98"
+            ]
+        ]
+    },
+    {
+        "id": "786c79a477b07b98",
+        "type": "ui_led",
+        "z": "f142116693ccffad",
+        "order": 5,
+        "group": "5571f7ce1b380216",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED 3",
+        "x": 810,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "466d6a73c4c072b0",
+        "type": "comment",
+        "z": "720be66f6a2c2df3",
+        "name": "온도에 따른 스위치 ON/OFF",
+        "info": "",
+        "x": 260,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "47212c26142c82d9",
+        "type": "mqtt out",
+        "z": "720be66f6a2c2df3",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ba4b29ba02f753ad",
+        "x": 930,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d5d103319b986ed0",
+        "type": "function",
+        "z": "720be66f6a2c2df3",
+        "name": "조건문 temp > 50도",
+        "func": "if (msg.payload >= 50) {\n    msg.payload = createMessage(true);\n} else {\n    msg.payload = createMessage(false); // Default to true if there is an error\n}\nreturn msg;\n\nfunction createMessage(value) {\n    return {\n        mac: \"08:B6:1F:75:11:FE\",\n        order: 2,\n        no: 2,\n        value: value\n    };\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "47212c26142c82d9"
+            ]
+        ]
+    },
+    {
+        "id": "800c09d6ad3caede",
+        "type": "mqtt in",
+        "z": "720be66f6a2c2df3",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ba4b29ba02f753ad",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "3729e97c89a2236b",
+                "ed0f6acff1af3494"
+            ]
+        ]
+    },
+    {
+        "id": "efedc79f10a3dd33",
+        "type": "debug",
+        "z": "720be66f6a2c2df3",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3729e97c89a2236b",
+        "type": "change",
+        "z": "720be66f6a2c2df3",
+        "name": "temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed0f6acff1af3494",
+        "type": "change",
+        "z": "720be66f6a2c2df3",
+        "name": "humi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humi",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "d5d103319b986ed0",
+                "efedc79f10a3dd33"
+            ]
+        ]
+    },
+    {
+        "id": "7016b800668c19ad",
+        "type": "comment",
+        "z": "720be66f6a2c2df3",
+        "name": "시간에 따른 스위치 ON/OFF",
+        "info": "",
+        "x": 260,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6f3f89f4beb8606d",
+        "type": "inject",
+        "z": "720be66f6a2c2df3",
+        "name": "ON 메세지 생성",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "16 08 * * *",
+        "once": false,
+        "onceDelay": 0,
+        "topic": "",
+        "payload": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":true}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "fb4a754fd0a52afa",
+                "a9f60986a08820a3"
+            ]
+        ]
+    },
+    {
+        "id": "640d0cbd471e6d8b",
+        "type": "inject",
+        "z": "720be66f6a2c2df3",
+        "name": "OFF 메세지 생성",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "17 08 * * *",
+        "once": false,
+        "onceDelay": 0,
+        "topic": "",
+        "payload": "{\"mac\":\"08:B6:1F:75:11:FE\",\"order\":2,\"no\":0,\"value\":false}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "a9f60986a08820a3",
+                "fb4a754fd0a52afa"
+            ]
+        ]
+    },
+    {
+        "id": "a9f60986a08820a3",
+        "type": "debug",
+        "z": "720be66f6a2c2df3",
+        "name": "메세지 디버그",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fb4a754fd0a52afa",
+        "type": "mqtt out",
+        "z": "720be66f6a2c2df3",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ba4b29ba02f753ad",
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "eebde325a6b6e949",
+        "type": "comment",
+        "z": "a33f3366c45d0823",
+        "name": "데이터 저장",
+        "info": "",
+        "x": 190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c1817f235988f178",
+        "type": "inject",
+        "z": "a33f3366c45d0823",
+        "name": "DELETE_status_data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 800,
+        "wires": [
+            [
+                "28e7425c8466ce0e"
+            ]
+        ]
+    },
+    {
+        "id": "28e7425c8466ce0e",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "delete from status",
+        "func": "// SQL 쿼리 생성\nvar sqlQuery = \"DELETE FROM status;\";\n\n// msg.topic에 SQL 쿼리를 반환\nmsg.topic = sqlQuery;\n\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 800,
+        "wires": [
+            [
+                "0d360982031664e5"
+            ]
+        ]
+    },
+    {
+        "id": "c0b71b681ba09098",
+        "type": "comment",
+        "z": "a33f3366c45d0823",
+        "name": "DB 데이터 삭제",
+        "info": "",
+        "x": 200,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "3454a86d310ce720",
+        "type": "mqtt in",
+        "z": "a33f3366c45d0823",
+        "name": "",
+        "topic": "i2r/bombzoo78@gmail.com/out",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ba4b29ba02f753ad",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 680,
+        "wires": [
+            [
+                "1faa4cb60f79e946"
+            ]
+        ]
+    },
+    {
+        "id": "261d2fbb84508ca8",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "insert DATA",
+        "func": "// 메시지로부터 JSON 데이터를 추출합니다.\nconst jsonData = msg.payload;\n\n// const timestamp = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul', hour12: false });\nconst timestamp = Math.floor(new Date().getTime() / 1000);\nconst email = jsonData.email;\nconst mac = jsonData.mac;\nconst temp = jsonData.temp;\nconst humi = jsonData.humi;\nconst in00 = jsonData.in[0];\nconst in01 = jsonData.in[1];\nconst in02 = jsonData.in[2];\nconst in03 = jsonData.in[3];\nconst out00 = jsonData.out[0];\nconst out01 = jsonData.out[1];\nconst out02 = jsonData.out[2];\nconst out03 = jsonData.out[3];\n\n// MySQL 쿼리를 생성합니다. 문자열 값은 작은따옴표로 감싸야 하고, 숫자 값은 그대로 넣습니다.\nlet sql = `INSERT INTO iot.status (timestamp, email, mac, temp, humi, in00, in01, in02, in03, out00, out01, out02, out03) \nVALUES (FROM_UNIXTIME(${timestamp}), '${email}', '${mac}', ${temp}, ${humi}, ${in00}, ${in01}, ${in02}, ${in03}, ${out00}, ${out01}, ${out02}, ${out03});`;\n\n// 메시지에 SQL 쿼리 추가\nmsg.topic = sql;\n\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\n// 메시지 전달\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 680,
+        "wires": [
+            [
+                "e71421ef3dc0c8ae",
+                "6cee6d0c273e58ef"
+            ]
+        ]
+    },
+    {
+        "id": "8a37ae9ea6921e56",
+        "type": "comment",
+        "z": "a33f3366c45d0823",
+        "name": "DB 생성",
+        "info": "",
+        "x": 180,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "87d0ebaa1e3d62e0",
+        "type": "inject",
+        "z": "a33f3366c45d0823",
+        "name": "CREATE_DB",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "d409661193919fef"
+            ]
+        ]
+    },
+    {
+        "id": "d409661193919fef",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "CreateDB_SQL",
+        "func": "// SQL 쿼리 생성\nvar sqlQuery = \"CREATE DATABASE iot default CHARACTER SET UTF8;\";\n\n// msg.topic에 SQL 쿼리를 반환\nmsg.topic = sqlQuery;\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "28e54687bab19986"
+            ]
+        ]
+    },
+    {
+        "id": "bbcc3c6221b8c520",
+        "type": "comment",
+        "z": "a33f3366c45d0823",
+        "name": "Table 생성",
+        "info": "",
+        "x": 180,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3b1c59d086d2f636",
+        "type": "inject",
+        "z": "a33f3366c45d0823",
+        "name": "CREATE_TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "0514b912e827e9c3"
+            ]
+        ]
+    },
+    {
+        "id": "0514b912e827e9c3",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "CreateTable_SQL",
+        "func": "var sqlQuery = `CREATE TABLE iot.status (\n    timestamp VARCHAR(45) PRIMARY KEY,\n    email VARCHAR(45) NOT NULL,\n    mac VARCHAR(45) NOT NULL,\n    temp FLOAT NOT NULL,\n    humi FLOAT NOT NULL,\n    in00 INT NOT NULL,\n    in01 INT NOT NULL,\n    in02 INT NOT NULL,\n    in03 INT NOT NULL,\n    out00 INT NOT NULL,\n    out01 INT NOT NULL,\n    out02 INT NOT NULL,\n    out03 INT NOT NULL\n);`;\n\nmsg.topic = sqlQuery;\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "efee02ad2009640c"
+            ]
+        ]
+    },
+    {
+        "id": "86d42f5176b58e72",
+        "type": "inject",
+        "z": "a33f3366c45d0823",
+        "name": "DROP_DB",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "a0e5f1d91b9cfed0"
+            ]
+        ]
+    },
+    {
+        "id": "a0e5f1d91b9cfed0",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "dropDB_SQL",
+        "func": "// SQL 쿼리 생성\nvar sqlQuery = \"DROP DATABASE iot;\";\n\n// msg.topic에 SQL 쿼리를 반환\nmsg.topic = sqlQuery;\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "9fe28ce5e1809448"
+            ]
+        ]
+    },
+    {
+        "id": "9b0d0d256cbf4835",
+        "type": "inject",
+        "z": "a33f3366c45d0823",
+        "name": "Drop_TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "7ec24b1ee739a68a"
+            ]
+        ]
+    },
+    {
+        "id": "7ec24b1ee739a68a",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "dropTABLE_SQL",
+        "func": "var sqlQuery = `DROP TABLE iot.status;`;\n\nmsg.topic = sqlQuery;\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "9268985eb804ae69"
+            ]
+        ]
+    },
+    {
+        "id": "e71421ef3dc0c8ae",
+        "type": "debug",
+        "z": "a33f3366c45d0823",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1faa4cb60f79e946",
+        "type": "json",
+        "z": "a33f3366c45d0823",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "261d2fbb84508ca8"
+            ]
+        ]
+    },
+    {
+        "id": "16de95e97afe305c",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "Create DB",
+        "group": "1eb21aa03d27126c",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Create DB",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "d409661193919fef"
+            ]
+        ]
+    },
+    {
+        "id": "b58e13489718e291",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "Drop DB",
+        "group": "1eb21aa03d27126c",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Drop DB",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "a0e5f1d91b9cfed0"
+            ]
+        ]
+    },
+    {
+        "id": "2e68675c6b7f0240",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "Create Table",
+        "group": "1eb21aa03d27126c",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Create Table",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "0514b912e827e9c3"
+            ]
+        ]
+    },
+    {
+        "id": "69790e06a2370aba",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "Drop Table",
+        "group": "1eb21aa03d27126c",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Drop Table",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "7ec24b1ee739a68a"
+            ]
+        ]
+    },
+    {
+        "id": "7d2597431af73bd9",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "Delete Data",
+        "group": "1eb21aa03d27126c",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Delete Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 840,
+        "wires": [
+            [
+                "28e7425c8466ce0e"
+            ]
+        ]
+    },
+    {
+        "id": "0122f5eaab37fedc",
+        "type": "comment",
+        "z": "a33f3366c45d0823",
+        "name": "DB 데이터보기",
+        "info": "",
+        "x": 200,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "355123a044d61601",
+        "type": "ui_button",
+        "z": "a33f3366c45d0823",
+        "name": "",
+        "group": "5463ef849b968425",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "List 10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 960,
+        "wires": [
+            [
+                "cf3e63d47919ce17"
+            ]
+        ]
+    },
+    {
+        "id": "cf3e63d47919ce17",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "Indexing Data form DB form Start to End",
+        "func": "var sqlQuery = \"SELECT * FROM status ORDER BY timestamp DESC LIMIT 10;\";\n\n// msg.topic에 SQL 쿼리를 넣음\nmsg.topic = sqlQuery;\n\nmsg.payload = {};  // 쿼리에 매개변수가 없다면 빈 객체 전달\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 960,
+        "wires": [
+            [
+                "16bf71a117fb0a70",
+                "a747f0045ecf6999"
+            ]
+        ]
+    },
+    {
+        "id": "66104138f302ba95",
+        "type": "function",
+        "z": "a33f3366c45d0823",
+        "name": "data parse",
+        "func": "var aJsonArray = new Array();\n\nfor (var i = 0; i < msg.payload.length; i++) {\n    var date = new Date(msg.payload[i].timestamp);\n    msg.payload[i].timestamp = date.toLocaleString(\"en-US\", { timeZone: \"Asia/Seoul\" });\n    aJsonArray.push(msg.payload[i]);\n    if (i == 29) break;  // i가 29일 때 루프 종료 (30개의 데이터를 가져오기 위해)\n}\n\nvar text = JSON.stringify(aJsonArray);\nvar obj = JSON.parse(text);\nmsg.payload = obj;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1020,
+        "wires": [
+            [
+                "723f3e79917f1398"
+            ]
+        ]
+    },
+    {
+        "id": "723f3e79917f1398",
+        "type": "ui_template",
+        "z": "a33f3366c45d0823",
+        "group": "5463ef849b968425",
+        "name": "데이터 데이블",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<table id=\"table\" border=\"1\">\n    <tr>\n        <th>Timestamp</th>\n        <th>email</th>\n        <th>MAC</th>\n        <th>temp(C)</th>\n        <th>humi(%)</th>\n        <th>in00</th>\n        <th>in01</th>\n        <th>in02</th>\n        <th>in03</th>\n        <th>out00</th>\n        <th>out01</th>\n        <th>out02</th>\n        <th>out03</th>\n    </tr>\n    <tbody>\n        <tr ng-repeat=\"row in msg.payload\">\n            <td ng-repeat=\"item in row\">{{item}}</td>\n        </tr>\n    </tbody>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 900,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a747f0045ecf6999",
+        "type": "debug",
+        "z": "a33f3366c45d0823",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "28e54687bab19986",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 565,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "9fe28ce5e1809448",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 555,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "efee02ad2009640c",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 585,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "16bf71a117fb0a70",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 685,
+        "y": 960,
+        "wires": [
+            [
+                "66104138f302ba95"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9268985eb804ae69",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 595,
+        "y": 500,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "6cee6d0c273e58ef",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 767.3333129882812,
+        "y": 681.3333129882812,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "0d360982031664e5",
+        "type": "Stackhero-MySQL",
+        "z": "a33f3366c45d0823",
+        "server": "a9b015ae48fb271f",
+        "name": "iot.status",
+        "x": 645,
+        "y": 800,
+        "wires": [
+            []
+        ],
+        "l": false
+    }
+]
