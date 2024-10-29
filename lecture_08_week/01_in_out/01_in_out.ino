@@ -1,83 +1,73 @@
-#include <WiFi.h>
-#include <PubSubClient.h>
+#include <Wire.h>
+#include <Adafruit_AHTX0.h>
 
-// WiFi 및 MQTT 설정
-const char* ssid = "your_wifi_ssid";            // WiFi SSID
-const char* password = "your_wifi_password";     // WiFi 비밀번호
-const char* mqttBroker = "your_mqtt_broker_ip";  // MQTT 브로커 주소
-const char* mqttTopic = "test/topic";            // 발행할 MQTT 주제
-const char* mqttSubscriptionTopic = "test/subscription"; // 구독할 MQTT 주제
+Adafruit_AHTX0 aht;
 
-// MQTT 클라이언트 객체
-WiFiClient espClient;
-PubSubClient client(espClient);
-
-// 메시지 발행 주기
-unsigned long lastMsgTime = 0;
-const unsigned long publishInterval = 5000;  // 5초
-
-// WiFi 연결
-void connectToWiFi() {
-  Serial.print("Connecting to WiFi...");
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("\nConnected to WiFi");
-}
-
-// MQTT 연결
-void connectToMQTT() {
-  client.setServer(mqttBroker, 1883);
-  while (!client.connected()) {
-    Serial.print("Connecting to MQTT...");
-    if (client.connect("ESP32_Client")) { // 클라이언트 이름 지정
-      Serial.println("Connected to MQTT");
-
-      // 연결 후 주제를 구독
-      client.subscribe(mqttSubscriptionTopic);
-      Serial.println("Subscribed to topic: " + String(mqttSubscriptionTopic));
-    } else {
-      Serial.print("Failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" trying again in 5 seconds");
-      delay(5000);
-    }
-  }
-}
-
-// MQTT 메시지 수신 시 호출되는 콜백 함수
-void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message received on topic: ");
-  Serial.println(topic);
-
-  Serial.print("Message: ");
-  for (unsigned int i = 0; i < length; i++) {
-    Serial.print((char)payload[i]);
-  }
-  Serial.println();
-}
+// Output pin numbers
+const int outputPins[4] = {26, 27, 32, 33};
+// Input pin numbers
+const int inputPins[4] = {16, 17, 18, 19};
 
 void setup() {
+  // Initialize Serial for debugging
   Serial.begin(115200);
-  connectToWiFi();
-  client.setCallback(callback);  // 콜백 함수 설정
-  connectToMQTT();
+
+  // Check if AHT sensor is connected
+  if (! aht.begin()) {
+    Serial.println("Could not find AHT sensor!");
+    while (1) delay(10);
+  }
+
+  // Set each output pin as an output
+  for (int i = 0; i < 4; i++) {
+    pinMode(outputPins[i], OUTPUT);
+  }
+
+  // Set each input pin as an input
+  for (int i = 0; i < 4; i++) {
+    pinMode(inputPins[i], INPUT);
+  }
 }
 
 void loop() {
-  // MQTT 연결 확인 및 재연결
-  if (!client.connected()) {
-    connectToMQTT();
-  }
-  client.loop();
+  // Cycle through each output pin
+  for (int i = 0; i < 4; i++) {
+    // Turn the current output pin on
+    digitalWrite(outputPins[i], HIGH);
 
-  // 주기적으로 메시지 발행
-  if (millis() - lastMsgTime >= publishInterval) {
-    lastMsgTime = millis();
-    String message = "Hello from ESP32!";
-    client.publish(mqttTopic, message.c_str());  // 메시지 발행
-    Serial.println("Published: " + message);
+    // Wait for a second
+    delay(1000);
+
+    // Turn the current output pin off
+    digitalWrite(outputPins[i], LOW);
   }
+
+  // Cycle through each input pin
+  for (int i = 0; i < 4; i++) {
+    // Read the state of the current input pin
+    int pinState = digitalRead(inputPins[i]);
+
+    // Print the state of the current input pin
+    Serial.print("Pin ");
+    Serial.print(inputPins[i]);
+    Serial.print(": ");
+    Serial.println(pinState);
+  }
+
+  // Read temperature and humidity from AHT sensor
+  sensors_event_t humidity, temp;
+  aht.getEvent(&humidity, &temp);
+
+  // Print temperature and humidity
+  Serial.print("Temperature: ");
+  Serial.print(temp.temperature);
+  Serial.println(" degrees C");
+
+  Serial.print("Humidity: ");
+  Serial.print(humidity.relative_humidity);
+  Serial.println("% rH");
+  
+  delay(2000); // Wait for 2 seconds before reading again
 }
+
+
