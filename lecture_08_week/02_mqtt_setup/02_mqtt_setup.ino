@@ -68,6 +68,7 @@ void publishMsg() {
 
 void setup() {
   Serial.begin(115200);
+
   connectToWiFi();
   client.setCallback(callback);  // 콜백 함수 설정
   connectToMQTT();
