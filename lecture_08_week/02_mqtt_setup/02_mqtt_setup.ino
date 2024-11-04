@@ -2,11 +2,11 @@
 #include <PubSubClient.h>
 
 // WiFi 및 MQTT 설정
-const char* ssid = "your_wifi_ssid";              // WiFi SSID
-const char* password = "your_wifi_password";       // WiFi 비밀번호
-const char* mqttBroker = "your_mqtt_broker_ip";    // MQTT 브로커 주소
-const char* mqttPublishTopic = "test/topic";       // 발행할 MQTT 주제
-const char* mqttSubscriptionTopic = "test/subscription"; // 구독할 MQTT 주제
+const char* ssid = "hyu-iot";              // WiFi SSID
+const char* password = "12345678";       // WiFi 비밀번호
+const char* mqttBroker = "ai.doowon.ac.kr";    // MQTT 브로커 주소
+const char* mqttPublishTopic = "i2r/a@gmail.com/out";       // 발행할 MQTT 주제
+const char* mqttSubscriptionTopic = "i2r/a@gmail.com/in"; // 구독할 MQTT 주제
 
 // MQTT 클라이언트 객체
 WiFiClient espClient;
